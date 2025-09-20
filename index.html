@@ -1,0 +1,48 @@
+<html>
+
+<head>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ejercicio 03 - Rango 100 a 300</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card">
+    <h2>🏷️ Ejercicio 03: ¿Está en el rango 100 a 300?</h2>
+
+    <div class="instrucciones">
+      <h3>📋 Instrucciones</h3>
+      <p>Este ejercicio comprobará si una variable <b>valor</b> se encuentra en el rango de <b>100 a 300</b> (incluidos).</p>
+      <p>Si el valor está en el rango → ✅ mensaje positivo.  
+         Si no está en el rango → ❌ mensaje negativo.</p>
+    </div>
+
+    <div id="mensaje">Haz clic en el botón para verificar.</div>
+
+    <button class="btn" onclick="verificarRango()">¡Ejecutar Ejercicio!</button>
+
+    <footer>Curso de JavaScript · Enseñanza Media | Ejercicio 03</footer>
+  </div>
+
+  <!-- JavaScript integrado -->
+  <script>
+    function verificarRango() {
+      // Cambiá este valor para probar distintos casos
+      const valor = 250;
+      const nodo = document.getElementById('mensaje');
+
+      nodo.classList.remove('mensaje-correcto', 'mensaje-incorrecto');
+
+      if (valor >= 100 && valor <= 300) {
+        nodo.innerText = `✅ El valor ${valor} está dentro del rango 100 a 300.`;
+        nodo.classList.add('mensaje-correcto');
+      } else {
+        nodo.innerText = `❌ El valor ${valor} NO está en el rango 100 a 300.`;
+        nodo.classList.add('mensaje-incorrecto');
+      }
+    }
+  </script>
+</body>
+</html>
+
